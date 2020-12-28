@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calculator1"
+             x:Class="Calculator1.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+          
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0"  Text="{Binding Label_Output}" BackgroundColor="Gray"/>
+        <Entry Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" Text="{Binding Entry_Input}" Keyboard="Numeric"/>
+        
+        <Button Text="del." Grid.Column="4" Grid.Row="2" Command="{Binding Command_Delete}" BackgroundColor="Gray"/>
+        <Button Text="clear" Grid.Column="4" Grid.Row="3" Command="{Binding Command_Clear}" BackgroundColor="Gray"/>
+
+        <Button Text="1" Grid.Column="0" Grid.Row="2" Command="{Binding Command_AddNumber}" CommandParameter="1"/>
+        <Button Text="2" Grid.Column="1" Grid.Row="2" Command="{Binding Command_AddNumber}" CommandParameter="2"/>
+        <Button Text="3" Grid.Column="2" Grid.Row="2" Command="{Binding Command_AddNumber}" CommandParameter="3"/>
+        <Button Text="4" Grid.Column="0" Grid.Row="3" Command="{Binding Command_AddNumber}" CommandParameter="4"/>
+        <Button Text="5" Grid.Column="1" Grid.Row="3" Command="{Binding Command_AddNumber}" CommandParameter="5"/>
+        <Button Text="6" Grid.Column="2" Grid.Row="3" Command="{Binding Command_AddNumber}" CommandParameter="6"/>
+        <Button Text="7" Grid.Column="0" Grid.Row="4" Command="{Binding Command_AddNumber}" CommandParameter="7"/>
+        <Button Text="8" Grid.Column="1" Grid.Row="4" Command="{Binding Command_AddNumber}" CommandParameter="8"/>
+        <Button Text="9" Grid.Column="2" Grid.Row="4" Command="{Binding Command_AddNumber}" CommandParameter="9"/>
+        <Button Text="0" Grid.Column="1" Grid.Row="5" Command="{Binding Command_AddNumber}" CommandParameter="0"/>
+
+        <Button Text="-" Grid.Column="3" Grid.Row="5" Command="{Binding Command_AddOperator}" CommandParameter=" - " BackgroundColor="CadetBlue"/>
+        <Button Text="+" Grid.Column="3" Grid.Row="4" Command="{Binding Command_AddOperator}" CommandParameter=" + " BackgroundColor="CadetBlue"/>
+        <Button Text="/" Grid.Column="3" Grid.Row="3" Command="{Binding Command_AddOperator}" CommandParameter=" / " BackgroundColor="CadetBlue"/>
+        <Button Text="x" Grid.Column="3" Grid.Row="2" Command="{Binding Command_AddOperator}" CommandParameter=" * " BackgroundColor="CadetBlue"/>
+
+    </Grid>
+
+</ContentPage>
